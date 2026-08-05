@@ -84,3 +84,7 @@
 - Inline `Promise.all` calls when they're simple and readable. Extract to named variables when calls have many arguments or are hard to read inline.
 - File order: constants → exports → private helpers (in order of first use).
 - Mirror source structure for test files: `src/users/service.ts` → `test/users/service.test.ts`
+- Use `type` for data structures.
+- Use `class` for behavior/state.
+- Use `interface` only when necessary.
+- Prefer named functions over arrow functions (except inline callbacks).
