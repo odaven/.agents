@@ -10,5 +10,21 @@ link() {
   ln -sfv "$src" "$dst"
 }
 
+mkdir -p "$DIR/build"
+cat \
+  "$DIR/md/communication.md" \
+  "$DIR/md/git.md" \
+  "$DIR/md/scope.md" \
+  "$DIR/md/testing.md" \
+  "$DIR/md/typescript.md" \
+  >"$DIR/build/coding.md"
+
+# example for adding things with printf like sections and separators
+# {
+#   cat "$DIR/md/communication.md"
+#   printf "\n\n---\n\n"
+#   cat "$DIR/md/git.md"
+# } >"$DIR/build/copilot.md"
+
 # Copilot
-link "$DIR/md/coding.md" "$COPILOT_HOME/copilot-instructions.md"
+link "$DIR/build/coding.md" "$COPILOT_HOME/copilot-instructions.md"
