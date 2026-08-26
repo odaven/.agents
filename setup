@@ -11,4 +11,4 @@ link() {
 }
 
 # Copilot
-link "$DIR/AGENTS.md" "$COPILOT_HOME/copilot-instructions.md"
+link "$DIR/md/coding.md" "$COPILOT_HOME/copilot-instructions.md"
