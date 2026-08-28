@@ -88,3 +88,31 @@
 - Use `class` for behavior/state.
 - Use `interface` only when necessary.
 - Prefer named functions over arrow functions (except inline callbacks).
+
+---
+
+## Python
+
+- Write scripts in top-to-bottom reading order:
+  1. Module docstring
+  2. Imports
+  3. `main()` function (entry point)
+  4. Classes, methods, and functions (in order of use)
+  5. Private methods and functions (prefixed with `_`) at the bottom
+  6. `if __name__ == "__main__":` guard at the end
+
+- Use `sys.exit(main())` pattern for CLI scripts to properly set exit codes:
+
+  ```python
+  def main() -> int:
+      """Main entry point."""
+      # ... logic ...
+      return 0 if success else 1
+
+  if __name__ == "__main__":
+      sys.exit(main())
+  ```
+
+- Type hints for function signatures and return values.
+- Docstrings for public functions and classes.
+- Use `pathlib.Path` for file operations, not string paths.
