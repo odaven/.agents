@@ -2,13 +2,26 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-link() {
+_link() {
   local src="$1"
   local dst="$2"
 
+  mkdir -p "$(dirname "$dst")"
   rm -rf "$dst"
   ln -sfv "$src" "$dst"
 }
 
-# Copilot
-link "$DIR/md/coding.md" "$COPILOT_HOME/copilot-instructions.md"
+copilot() {
+  _link "$DIR/md/coding.md" "$COPILOT_HOME/copilot-instructions.md"
+}
+
+codex() {
+  _link "$DIR/md/coding.md" "$CODEX_HOME/AGENTS.md"
+}
+
+if [[ $# -ne 1 || "$1" != "copilot" && "$1" != "codex" ]]; then
+  printf 'Usage: %s {copilot|codex}\n' "$0" >&2
+  exit 1
+fi
+
+"$@"

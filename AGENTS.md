@@ -1,6 +1,6 @@
-# AGENTS.md
+# Agent configuration
 
-This repository contains my personal configuration for AI agents.
+This repository contains shared instructions for AI agents.
 
-- `md/` contains Markdown files shared with AI agents.
-- `setup` installs/symlinks the configuration into the appropriate locations.
+- `md/` contains the shared instructions.
+- `setup` configures the selected agent.
