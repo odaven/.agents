@@ -1,0 +1,14 @@
+# Claude
+export CLAUDE_CONFIG_DIR="$XDG_CONFIG_HOME/claude"
+
+# Codex
+export CODEX_HOME="$XDG_CONFIG_HOME/codex"
+
+# Copilot
+export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
+export COPILOT_CACHE_HOME="$XDG_CACHE_HOME/copilot"
+
+# Aliases
+alias a='codex'
+alias ac='a --continue'
+alias ar='a --resume'
